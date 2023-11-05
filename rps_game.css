@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+        background-image: url('bg2.gif');
+        background-size: cover; 
+        background-repeat: no-repeat; 
+        background-attachment: fixed;
+        background-position: center;
+        background-color: rgb(8, 8, 8);
+}
+
+.platee{
+    height: 100px;
+    width: auto;
+    background-color: rgb(80, 80, 159);
+    color: yellow;
+    border: 10px;
+    border-radius:10%;
+    border-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.choices{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.choices h2 img{
+    height: 50px;
+    width: 50px;
+
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: alias;
+
+}
+#computer-choice{
+    color: antiquewhite;
+}
+#user-choice{
+    color: antiquewhite;
+}
+#result{
+    color: antiquewhite;
+}
