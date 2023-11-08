@@ -23,8 +23,8 @@ rockButton.addEventListener('click', () => {
 });
 
 paperButton.addEventListener('click', () => {
-    userChoice = 'paper';
-    userChoiceDisplay.innerHTML = 'paper';
+    userChoice = 'Paper';
+    userChoiceDisplay.innerHTML = 'Paper';
     generateComputerChoice();
 });
 scissorButton.addEventListener('click', () => {
@@ -39,7 +39,7 @@ function generateComputerChoice() {
         computerChoice = 'Rock'
     }
     if(randomNumber === 2){
-        computerChoice = 'Scissors'
+        computerChoice = 'Scissor'
     }
     if(randomNumber === 3){
         computerChoice = 'Paper'
@@ -51,28 +51,35 @@ function generateComputerChoice() {
 function getResult() {
     if ( computerChoice === userChoice) {
         result = 'Its a draw'
+        document.getElementById("draw-sound").play();
     }
     if (computerChoice === "Rock" && userChoice === "Paper"){
         result = 'win'
+        document.getElementById("win-sound").play();
     }
     if (computerChoice === "Rock" && userChoice === "Scissor"){
-        result = 'lost'
+        result = 'lose'
+        document.getElementById("lose-sound").play();
     }
     if (computerChoice === "Paper" && userChoice === "Scissor")
     {
         result = 'win'
+        document.getElementById("win-sound").play();
     }
     if (computerChoice === "Paper" && userChoice === "Rock")
     {
-        result = 'lost'
+        result = 'lose'
+        document.getElementById("lose-sound").play();
     }
     if (computerChoice === "Scissor" && userChoice === "Rock")
     {
         result = 'win'
+        document.getElementById("win-sound").play();
     }
     if (computerChoice === "Scissor" && userChoice === "Paper")
     {
-        result = 'lost'
+        result = 'lose'
+        document.getElementById("lose-sound").play();
     }
     resultDisplay.innerHTML = result
 }
